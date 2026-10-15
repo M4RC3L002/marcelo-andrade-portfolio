@@ -27,3 +27,21 @@
 .project-actions{display:flex;align-items:center;gap:18px 24px;flex-wrap:wrap;margin-top:20px}
 .project-actions .text-link{min-height:44px}
 @media(max-width:700px){.preview.live-capture{padding:12px 12px 20px;min-height:0}.detail .live-capture{padding:12px}.project-actions{gap:8px 20px}.project-title{flex-wrap:wrap}}
+
+/* Grade uniforme: mesmo enquadramento do Brasa Burger em todos os projetos. */
+.project-grid{align-items:start;gap:32px}
+.project:first-child{grid-column:auto}
+.project.project-featured{padding:0;border:0;border-radius:0;background:transparent;backdrop-filter:none}
+.project .preview,.project:first-child .preview,.project.project-featured .dashboard-capture{height:auto;aspect-ratio:1.4;min-height:0;padding:16px!important;margin:0}
+.project .preview.live-capture{padding:16px!important}
+.project .live-capture img{height:calc(100% - 28px);min-height:0;object-fit:cover;object-position:top;flex:1}
+.project .live-capture figcaption,.project .dashboard-capture figcaption{font-size:10px;line-height:16px;margin-top:8px;flex-shrink:0}
+.project .dashboard-capture{gap:0}
+.project .dashboard-image{height:calc(100% - 24px);max-height:calc(100% - 24px);object-fit:contain}
+.project .project-title,.project.project-featured .project-title{margin-top:16px;gap:12px;flex-wrap:wrap}
+.project .project-title h3,.project.project-featured .project-title h3{font-size:23px}
+.project .project-open{font-size:11px;gap:8px;min-height:44px;flex-shrink:0}
+.project .project-open svg{width:18px;height:18px}
+.project .project-meta,.project.project-featured .project-meta{margin-top:12px}
+.project .project-actions{margin-top:8px;gap:8px 24px}
+@media(max-width:700px){.project-grid{gap:28px}.project .project-title h3,.project.project-featured .project-title h3{font-size:20px}.project .preview,.project:first-child .preview,.project.project-featured .dashboard-capture,.project .preview.live-capture{padding:12px!important}.project .mock-window{transform:scale(.85);transform-origin:center}.project .live-capture figcaption{font-size:9px}}
