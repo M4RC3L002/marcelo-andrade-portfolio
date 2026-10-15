@@ -1,0 +1,207 @@
+{
+  "generatedAt": "2026-10-15T03:15:38.4596835Z",
+  "narrative": {
+    "rules": [],
+    "northStar": "Portfólio editorial de produtos digitais",
+    "dos": [
+      "Do manter ciano nas ações, seleção e foco.",
+      "Do preservar rótulos de conceito e estado Planejado nas propostas.",
+      "Do respeitar movimento reduzido e manter conteúdo visível sem animação de entrada."
+    ],
+    "overview": "Composição própria em português, com títulos amplos, superfícies escuras e ciano para ações. O trabalho aparece como conceito visual desde a primeira tela.",
+    "keyCharacteristics": [
+      "Hierarquia tipográfica ampla e espaços generosos.",
+      "Linhas abertas para organizar serviços e conteúdo.",
+      "Prévias ilustrativas acompanhadas de estado explícito."
+    ],
+    "donts": [
+      "Don't apresentar prévias como capturas de produtos concluídos.",
+      "Don't criar links falsos para canais ainda não informados.",
+      "Don't substituir a composição aberta por cartões em todas as seções."
+    ]
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "description": "Link para projetos",
+      "css": ".ds-item{display:inline-flex;align-items:center;justify-content:center;font:750 13px Manrope Variable,sans-serif;min-height:48px;padding:15px 22px;border-radius:5px;background:var(--accent,#57dcdf);color:var(--bg,#081823);text-decoration:none}.ds-item:hover{background:#9ceff0}.ds-item:focus-visible{outline:2px solid var(--accent,#57dcdf);outline-offset:6px}",
+      "refersTo": "button-primary",
+      "html": "<a class=\"ds-item\" href=\"#projetos\">Explore os projetos</a>"
+    },
+    {
+      "name": "Filtro selecionado",
+      "kind": "button",
+      "description": "Estado selecionado do filtro",
+      "css": ".ds-item{font:700 12px Manrope Variable,sans-serif;min-height:44px;padding:10px 18px;border:0;border-radius:5px;background:var(--accent,#57dcdf);color:var(--bg,#081823);cursor:pointer}.ds-item:hover{color:var(--text,#edf5f7);background:var(--surface,#102530)}.ds-item:focus-visible{outline:2px solid var(--accent,#57dcdf);outline-offset:6px}",
+      "refersTo": "filter-selected",
+      "html": "<button class=\"ds-item\" aria-pressed=\"true\">Todos</button>"
+    },
+    {
+      "name": "Etiqueta de tecnologia",
+      "kind": "chip",
+      "description": "Rótulo sem ação",
+      "css": ".ds-chip{display:inline-block;font:11px Manrope Variable,sans-serif;padding:5px 12px;border-radius:4px;background:var(--surface,#102530);color:var(--text,#edf5f7)}",
+      "refersTo": "technology-chip",
+      "html": "<span class=\"ds-chip\">TypeScript</span>"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "css": ".ds-nav{display:flex;gap:30px;font:13px Manrope Variable,sans-serif}.ds-nav a{color:var(--muted,#a4bac6);text-decoration:none}.ds-nav a:hover{color:var(--accent,#57dcdf)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#57dcdf);outline-offset:6px}",
+      "description": "Links principais",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><a href=\"#servicos\">Serviços</a><a href=\"#projetos\">Projetos</a></nav>"
+    },
+    {
+      "name": "Moldura de conceito",
+      "kind": "card",
+      "css": ".ds-frame{display:block;font:13px Manrope Variable,sans-serif;padding:24px 24px 18px;border-radius:10px;background:#153341;color:var(--text,#edf5f7);text-decoration:none;transform:rotate(-3deg);transition:transform .3s ease-out}.ds-frame strong{display:block;margin-top:22px}.ds-frame small{color:#b9d3dd}.ds-frame:hover{transform:rotate(0)}.ds-frame:focus-visible{outline:2px solid var(--accent,#57dcdf);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-frame{transform:none;transition:none}}",
+      "description": "Moldura do hero, sem reproduzir a interface ilustrativa interna",
+      "html": "<a class=\"ds-frame\" href=\"#projetos\"><span>Em foco</span><strong>AndradeTech OS</strong><small>Conceito de produto</small></a>"
+    }
+  ],
+  "schemaVersion": 2,
+  "title": "Design System: Marcelo Andrade",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "mock-window",
+        "purpose": "Sombra da janela ilustrativa",
+        "value": "0 16px 35px #0002"
+      }
+    ],
+    "breakpoints": [
+      {
+        "value": "1000px",
+        "name": "tablet-max"
+      },
+      {
+        "value": "700px",
+        "name": "mobile-max"
+      },
+      {
+        "value": "1400px",
+        "name": "wide-min"
+      }
+    ],
+    "motion": [
+      {
+        "name": "hero-hover",
+        "purpose": "Retorno da rotação da moldura; removido com movimento reduzido",
+        "value": "transform .3s ease-out"
+      }
+    ],
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Marinho profundo",
+        "canonical": "#081823",
+        "tonalRamp": [
+          "oklch(15% 0.03 235)",
+          "oklch(26% 0.03 235)",
+          "oklch(38% 0.03 235)",
+          "oklch(49% 0.03 235)",
+          "oklch(61% 0.03 235)",
+          "oklch(72% 0.03 235)",
+          "oklch(84% 0.03 235)",
+          "oklch(95% 0.03 235)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Ciano claro",
+        "canonical": "#9ceff0",
+        "tonalRamp": [
+          "oklch(15% 0.07 195)",
+          "oklch(26% 0.07 195)",
+          "oklch(38% 0.07 195)",
+          "oklch(49% 0.07 195)",
+          "oklch(61% 0.07 195)",
+          "oklch(72% 0.07 195)",
+          "oklch(84% 0.07 195)",
+          "oklch(95% 0.07 195)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Azul acinzentado",
+        "canonical": "#a4bac6",
+        "tonalRamp": [
+          "oklch(15% 0.025 230)",
+          "oklch(26% 0.025 230)",
+          "oklch(38% 0.025 230)",
+          "oklch(49% 0.025 230)",
+          "oklch(61% 0.025 230)",
+          "oklch(72% 0.025 230)",
+          "oklch(84% 0.025 230)",
+          "oklch(95% 0.025 230)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Ciano luminoso",
+        "canonical": "#57dcdf",
+        "tonalRamp": [
+          "oklch(15% 0.11 195)",
+          "oklch(26% 0.11 195)",
+          "oklch(38% 0.11 195)",
+          "oklch(49% 0.11 195)",
+          "oklch(61% 0.11 195)",
+          "oklch(72% 0.11 195)",
+          "oklch(84% 0.11 195)",
+          "oklch(95% 0.11 195)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Marinho de superfície",
+        "canonical": "#102530",
+        "tonalRamp": [
+          "oklch(15% 0.035 230)",
+          "oklch(26% 0.035 230)",
+          "oklch(38% 0.035 230)",
+          "oklch(49% 0.035 230)",
+          "oklch(61% 0.035 230)",
+          "oklch(72% 0.035 230)",
+          "oklch(84% 0.035 230)",
+          "oklch(95% 0.035 230)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Branco frio",
+        "canonical": "#edf5f7",
+        "tonalRamp": [
+          "oklch(15% 0.01 220)",
+          "oklch(26% 0.01 220)",
+          "oklch(38% 0.01 220)",
+          "oklch(49% 0.01 220)",
+          "oklch(61% 0.01 220)",
+          "oklch(72% 0.01 220)",
+          "oklch(84% 0.01 220)",
+          "oklch(95% 0.01 220)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Linha azul",
+        "canonical": "#29414e",
+        "tonalRamp": [
+          "oklch(15% 0.035 230)",
+          "oklch(26% 0.035 230)",
+          "oklch(38% 0.035 230)",
+          "oklch(49% 0.035 230)",
+          "oklch(61% 0.035 230)",
+          "oklch(72% 0.035 230)",
+          "oklch(84% 0.035 230)",
+          "oklch(95% 0.035 230)"
+        ]
+      }
+    },
+    "evidence": {
+      "source": "app/globals.css, components/portfolio.tsx, components/preview.tsx",
+      "visualReview": "Unavailable; source inspection only",
+      "tonalRamps": "Synthetic OKLCH panel ramps; not implemented CSS tokens"
+    }
+  }
+}
