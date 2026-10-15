@@ -1,6 +1,8 @@
 const github = process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || 'https://github.com/M4RC3L002';
-const phone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, '');
+const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || '5573988343028').replace(/\D/g, '');
 export const site = {
+  email: 'marcelo.andrade.webdev@gmail.com',
+  phoneLabel: '(73) 98834-3028',
   github: github && /^https:\/\/github\.com\/[a-zA-Z0-9-]+\/?$/.test(github) ? github : null,
   whatsapp: phone && /^[1-9]\d{9,14}$/.test(phone) ? `https://wa.me/${phone}` : null,
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://marcelo-andrade-portfolio-virid.vercel.app',
@@ -17,4 +19,3 @@ export const projects: readonly Project[] = [
   { slug: 'agendamento-online', name: 'Agendamento online', category: 'Produtividade', kind: 'Organização de agenda', text: 'Menos troca de mensagens. Mais clareza para escolher o próximo horário.', problem: 'Tornar visíveis os serviços e horários disponíveis para uma reserva.', scope: ['Seleção de serviço, data e horário', 'Confirmação de agendamento', 'Planejamento de regras de disponibilidade'], tone: 'schedule' },
   { slug: 'controle-financeiro', name: 'Controle financeiro', category: 'Gestão', kind: 'Finanças pessoais', text: 'Entradas, saídas e decisões mais claras em uma visão organizada.', problem: 'Reunir movimentações financeiras e facilitar sua leitura por período.', scope: ['Registro de entradas e saídas', 'Categorias e filtros por período', 'Resumo de movimentações'], tone: 'finance' },
 ] as const;
-
