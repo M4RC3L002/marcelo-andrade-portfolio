@@ -1,10 +1,11 @@
 const github = process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || 'https://github.com/M4RC3L002';
 const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || '5573988343028').replace(/\D/g, '');
+const whatsappMessage = 'Olá, Marcelo! Conheci seu portfólio e gostaria de solicitar um orçamento para um site ou projeto digital. Podemos conversar sobre a minha ideia?';
 export const site = {
   email: 'marcelo.andrade.webdev@gmail.com',
   phoneLabel: '(73) 98834-3028',
   github: github && /^https:\/\/github\.com\/[a-zA-Z0-9-]+\/?$/.test(github) ? github : null,
-  whatsapp: phone && /^[1-9]\d{9,14}$/.test(phone) ? `https://wa.me/${phone}` : null,
+  whatsapp: phone && /^[1-9]\d{9,14}$/.test(phone) ? `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}` : null,
   url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://marcelo-andrade-portfolio-virid.vercel.app',
 };
 export type Project = {
