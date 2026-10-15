@@ -14,3 +14,6 @@ Responsive, accessible navigation and SEO. GitHub and WhatsApp must be explicit 
 Five supplied project names, no screenshots, repositories, contact details or biography. Project previews are illustrative concepts.
 ## Users
 Assumption: prospective clients and collaborators evaluating Marcelo's work.
+
+## Atualização de evidência
+AndradeTech OS possui captura fornecida pelo usuário do dashboard inicial. Versão de apresentação com barras externas removidas e usuário ocultado. A captura não comprova o funcionamento dos módulos. Demais projetos seguem como conceitos planejados.

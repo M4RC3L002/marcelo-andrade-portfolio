@@ -117,3 +117,6 @@ Raios variam conforme o papel descrito no frontmatter. Conteúdo principal abert
 - Don't apresentar prévias como capturas de produtos concluídos.
 - Don't criar links falsos para canais ainda não informados.
 - Don't substituir a composição aberta por cartões em todas as seções.
+
+### Dashboard do AndradeTech OS
+Imagem de apresentação em public/images/andradetech-dashboard.png, derivada da captura fornecida pelo usuário e editada para remover barras e identificação pessoal. Usar proporção preservada com object-fit contain e legenda de visão inicial; não rotular como dados ilustrativos.

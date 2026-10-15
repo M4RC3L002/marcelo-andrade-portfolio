@@ -13,4 +13,3 @@ export const projects = [
   { slug: 'controle-financeiro', name: 'Controle financeiro', category: 'Gestão', kind: 'Finanças pessoais', text: 'Entradas, saídas e decisões mais claras em uma visão organizada.', problem: 'Reunir movimentações financeiras e facilitar sua leitura por período.', scope: ['Registro de entradas e saídas', 'Categorias e filtros por período', 'Resumo de movimentações'], tone: 'finance' },
 ] as const;
 
-
