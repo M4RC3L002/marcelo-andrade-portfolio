@@ -120,3 +120,8 @@ Raios variam conforme o papel descrito no frontmatter. Conteúdo principal abert
 
 ### Dashboard do AndradeTech OS
 Imagem de apresentação em public/images/andradetech-dashboard.png, derivada da captura fornecida pelo usuário e editada para remover barras e identificação pessoal. Usar proporção preservada com object-fit contain e legenda de visão inicial; não rotular como dados ilustrativos.
+
+### Refinamento Watermelon UI
+Navigation 1, Tabs 1 e Contact 1 adaptados ao sistema existente. Navegação ativa com aria-current location; filtros segmentados com contagem e aria-pressed; contatos por método. Captura principal reta, cantos de 12–14px em painéis de destaque, preservando paleta e fonte. Referências em WATERMELON.md.
+
+Glassmorphism solicitado pelo usuário em 15/10/2026: apenas destaque principal e primeiro projeto, superfície translúcida azul-marinho/ciano, blur 18/12px, borda clara discreta e sombra com deslocamento. Captura opaca e íntegra; fallback sólido sem suporte a backdrop-filter.

@@ -203,5 +203,26 @@
       "visualReview": "Unavailable; source inspection only",
       "tonalRamps": "Synthetic OKLCH panel ramps; not implemented CSS tokens"
     }
+  },
+  "watermelonRefinement": {
+    "glass": {
+      "screenshot": "opaque",
+      "scope": "AndradeTech main showcase",
+      "blurDesktop": "18px",
+      "fallback": "solid navy",
+      "blurMobile": "10px"
+    },
+    "radii": [
+      "8px controls",
+      "12px cards",
+      "14px hero"
+    ],
+    "sources": [
+      "navigation-1",
+      "tabs-1",
+      "contact-1"
+    ],
+    "activeNavigation": "aria-current location",
+    "filters": "pressed buttons with counts"
   }
 }
