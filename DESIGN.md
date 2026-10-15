@@ -125,3 +125,5 @@ Imagem de apresentação em public/images/andradetech-dashboard.png, derivada da
 Navigation 1, Tabs 1 e Contact 1 adaptados ao sistema existente. Navegação ativa com aria-current location; filtros segmentados com contagem e aria-pressed; contatos por método. Captura principal reta, cantos de 12–14px em painéis de destaque, preservando paleta e fonte. Referências em WATERMELON.md.
 
 Glassmorphism solicitado pelo usuário em 15/10/2026: apenas destaque principal e primeiro projeto, superfície translúcida azul-marinho/ciano, blur 18/12px, borda clara discreta e sombra com deslocamento. Captura opaca e íntegra; fallback sólido sem suporte a backdrop-filter.
+
+Atualização: capturas reais do Brasa Burger e Amarílis substituem as prévias conceituais de cardápio e loja. Links de demonstração ficam fora do link de detalhes, com nova aba explicitada. A vitrine Amarílis preserva suas proporções; fotografias pertencem à apresentação demonstrativa do site. Rotas existentes mantidas.
