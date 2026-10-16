@@ -22,3 +22,9 @@ export const projects: readonly Project[] = [
   {"slug":"pdv-estoque","name":"Ponto & Papel · Vendas e estoque","category":"Gestão","kind":"PDV e estoque","text":"Produtos, impressões e vendas em um balcão digital com controle de estoque e comprovantes.","problem":"Organizar o atendimento de uma papelaria, reunindo produtos, serviços e movimentação de estoque em um fluxo de venda simples.","scope":["Cadastro e edição de produtos, serviços e códigos de barras","Sacola com quantidades, desconto, formas de pagamento simuladas e troco","Histórico de vendas, cancelamento com reposição de estoque e exclusão de canceladas","Comprovantes e relatório em PDF identificados como demonstração","Dados locais, temas claro/escuro e restauração dos exemplos"],"tone":"retail","demo":"https://ponto-papel-demo.vercel.app/","repository":"https://github.com/M4RC3L002/ponto-papel-demo","stack":["JavaScript","HTML","CSS","jsPDF","Vercel"],"note":"Loja, clientes, produtos e vendas fictícios. Sem cadastro e sem acesso ao sistema original. Os dados ficam apenas neste navegador e podem ser restaurados. Pagamentos são simulados, sem cobrança, integração bancária ou emissão fiscal. PDFs são demonstrativos e não têm validade fiscal."},
 ] as const;
 
+
+export function projectDemoUrl(value?:string,portfolio:'escuro'|'slush'='escuro'){
+ if(!value)return value;
+ try{const url=new URL(value);if(['https://andradetech-demo.vercel.app','https://ponto-papel-demo.vercel.app'].includes(url.origin)){url.searchParams.set('portfolio',portfolio);return url.href;}}catch{}
+ return value;
+}
