@@ -11,3 +11,12 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reel-card{will-change:auto}}
 @supports not (backdrop-filter:blur(1px)){.header{background:var(--bg)}}
 @media(prefers-reduced-transparency:reduce){.header{background:var(--bg);backdrop-filter:none}}
+/* Animated signal field: decorative, pausable and isolated from page content. */
+.hero{isolation:isolate;background:#0b171b}
+.hero-atmosphere{position:absolute;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 8% 35%,#146d703d,transparent 48%),radial-gradient(ellipse at 94% 58%,#155a793b,transparent 47%),linear-gradient(180deg,#0d1c21,#101415)}
+.hero-network{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;mask-image:radial-gradient(ellipse at 50% 29%,#0004 0%,#000a 38%,#000 68%);-webkit-mask-image:radial-gradient(ellipse at 50% 29%,#0004 0%,#000a 38%,#000 68%)}
+.motion-toggle{position:absolute;right:28px;top:14px;z-index:4;display:flex;align-items:center;gap:9px;min-height:44px;padding:8px 13px;border:1px solid #679a9b55;border-radius:30px;background:#11272bd9;color:#c8e2df;font-size:10px;backdrop-filter:blur(10px)}
+.motion-toggle[aria-pressed=true]{background:#254045}
+.hero .hero-copy,.hero .showreel{position:relative;z-index:2}
+@media(max-width:700px){.hero{padding-top:62px}.motion-toggle{right:20px;top:7px;padding:8px 12px;min-height:44px;font-size:9px}.hero-network{mask-image:radial-gradient(ellipse at 50% 30%,#0005,#000 80%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#0005,#000 80%)}}
+@media(hover:hover) and (pointer:fine){.motion-toggle:hover{background:#234448;color:#ecfffa}}

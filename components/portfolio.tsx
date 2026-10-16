@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUpRight, Github, Mail, Menu, MessageCircle, X } from '
 import { projects, site } from '@/lib/site';
 import Preview from './preview';
 import ProjectFilters from './project-filters';
+import HeroBackground from './hero-background';
 
 const links = [['inicio', 'Início'], ['servicos', 'Serviços'], ['sobre', 'Sobre'], ['projetos', 'Projetos'], ['contato', 'Contato']];
 const covers = [
@@ -27,7 +28,7 @@ export default function Portfolio() {
    <div className="header-actions"><a className="button primary small" href={site.whatsapp || '#contato'} target="_blank" rel="noopener noreferrer">Vamos conversar <ArrowUpRight size={16}/></a><button ref={menuButton} className="menu-button" type="button" onClick={()=>setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open?'Fechar menu':'Abrir menu'}>{open?<X/>:<Menu/>}</button></div>
   </div><nav id="mobile-navigation" className="mobile-nav" aria-label="Navegação móvel" hidden={!open}>{links.map(([id,label])=><a key={id} href={`#${id}`} onClick={()=>setOpen(false)}>{label}<ArrowUpRight size={20}/></a>)}</nav></header>
   <main id="conteudo">
-   <section className="hero" id="inicio"><div className="hero-copy container"><h1><span>Da sua ideia</span><strong>para o mundo.</strong></h1><p>Sou Marcelo Andrade. Desenvolvo sites e sistemas web<br className="wide-break"/> que conectam o seu negócio às pessoas.</p><div className="hero-actions"><a className="button primary" href="#projetos">Conheça meu trabalho <ArrowRight size={20}/></a><a className="text-link" href="#contato">Vamos tirar do papel <ArrowUpRight size={18}/></a></div></div>
+   <section className="hero" id="inicio"><HeroBackground/><div className="hero-copy container"><h1><span>Da sua ideia</span><strong>para o mundo.</strong></h1><p>Sou Marcelo Andrade. Desenvolvo sites e sistemas web<br className="wide-break"/> que conectam o seu negócio às pessoas.</p><div className="hero-actions"><a className="button primary" href="#projetos">Conheça meu trabalho <ArrowRight size={20}/></a><a className="text-link" href="#contato">Vamos tirar do papel <ArrowUpRight size={18}/></a></div></div>
     <div className="showreel container" aria-label="Conheça os sites dos projetos">{covers.map((cover,i)=><a className={`reel-card reel-${cover.tone}`} key={cover.name} href={cover.href} target="_blank" rel="noopener noreferrer" aria-label={`Abrir site de ${cover.name} (nova aba)`}><div className="reel-image"><Image unoptimized src={cover.src} alt={`Interface de ${cover.name}`} width={1280} height={900} priority={i===1}/></div><span>{cover.name}<ArrowUpRight size={16}/></span></a>)}</div>
    </section>
    <section className="manifesto container"><h2>Uma boa ideia merece<br/><span>uma experiência à altura.</span></h2><div className="manifesto-bottom"><p>Clareza para quem visita.<br/>Lógica para quem usa.<br/>Cuidado em cada tela.</p><p>Do primeiro contato ao último clique, o desenvolvimento e o design trabalham juntos para tornar a sua presença digital mais útil.</p></div></section>

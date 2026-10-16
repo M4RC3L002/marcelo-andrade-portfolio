@@ -10,3 +10,6 @@ Cabeçalho de 80px (72px mobile), abertura centralizada, galeria inclinada com t
 
 ## Interação
 Foco visível; menu fecha com Escape e retorna foco ao botão. Seletores aria-pressed; nomes acessíveis; alvos de 44px. Movimento apenas na apresentação inicial do título e no feedback de interação; prefers-reduced-motion desliga as animações. Cabeçalho opaco como fallback de blur e de preferência por transparência reduzida. Projetos são a mídia principal; nenhum vídeo ou fundo decorativo da referência foi copiado.
+
+## Fundo animado
+Canvas decorativo com partículas e conexões em ciano, linhas em fluxo e reação ao cursor apenas com mouse. 30 fps, 66 partículas no desktop e 30 no celular, DPR limitado. Pausa manual, pausa fora da tela e em aba oculta. Movimento reduzido desenha quadro estático. Sem biblioteca adicional ou atualizações React por frame.
