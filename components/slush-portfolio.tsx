@@ -3,7 +3,7 @@ import {useEffect,useRef,useState} from 'react';
 import Image from 'next/image';
 import {ArrowUpRight,ArrowDown,Code2,MousePointer2,Pause,Play,Mail,MessageCircle,ArrowLeft} from 'lucide-react';
 import {projects,site} from '@/lib/site';
-const photos:Record<string,string>={os:'/images/andradetech-demo-preview.jpg',menu:'/images/brasa-preview.jpg',shop:'/images/amarilis-preview.jpg',schedule:'/images/forma-preview.jpg',finance:'/images/controle-financeiro-preview.jpg',retail:'/images/ponto-papel-preview.jpg'};
+const photos:Record<string,string>={os:'/images/andradetech-demo-preview.jpg',menu:'/images/brasa-preview.jpg',shop:'/images/amarilis-preview.jpg',schedule:'/images/forma-preview.jpg',finance:'/images/controle-financeiro-preview.jpg',retail:'/images/ponto-papel-dashboard.jpg'};
 // Original vector geometry: shaded tube approximation, no source artwork or paid fonts.
 function Ribbon(){return <svg className="sl-ribbon" viewBox="0 0 1200 700" fill="none" aria-hidden="true"><defs><linearGradient id="sl-tube" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#aedaff"/><stop offset=".27" stopColor="#4da2ff"/><stop offset=".65" stopColor="#1971e8"/><stop offset="1" stopColor="#1748ac"/></linearGradient></defs><path d="M-120 590C95 590 0 60 280 95C560 130 370 660 720 590C1030 528 860 22 1280 80" stroke="#143d86" strokeWidth="96" strokeLinecap="round"/><path d="M-120 580C95 580 0 50 280 85C560 120 370 650 720 580C1030 518 860 12 1280 70" stroke="url(#sl-tube)" strokeWidth="88" strokeLinecap="round"/><path d="M-120 555C95 555 0 25 280 60C560 95 370 625 720 555C1030 493 860 -13 1280 45" stroke="#c6e6ff" strokeOpacity=".5" strokeWidth="4" strokeLinecap="round"/></svg>}
 export default function SlushPortfolio(){
