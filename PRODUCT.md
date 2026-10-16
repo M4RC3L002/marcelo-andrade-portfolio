@@ -1,22 +1,9 @@
-# Product
-<!-- impeccable:product-schema 1 -->
-## Platform
-web
-## Stack
-Next.js, Tailwind CSS, TypeScript; Vercel as requested.
-## Product Purpose
-Public developer portfolio for Marcelo Andrade. Present services, about, five planned projects and contact.
-## Brand Commitments
-Portuguese copy; navy and cyan. Figma 0Ljxub2TVox2SaTRkBziYA node 587:638 is inspiration, not a literal copy.
-## Capabilities and Constraints
-Responsive, accessible navigation and SEO. GitHub and WhatsApp must be explicit placeholders until supplied. No fabricated clients, experience, results or completed-project claims. Prepare deployment; do not claim publication.
-## Evidence on Hand
-Five supplied project names, no screenshots, repositories, contact details or biography. Project previews are illustrative concepts.
-## Users
-Assumption: prospective clients and collaborators evaluating Marcelo's work.
+# Produto
 
-## Atualização de evidência
-AndradeTech OS possui captura fornecida pelo usuário do dashboard inicial. Versão de apresentação com barras externas removidas e usuário ocultado. A captura não comprova o funcionamento dos módulos. Demais projetos seguem como conceitos planejados.
+Versão oficial do portfólio de Marcelo Andrade, promovida após aprovação do usuário. Mesmos cinco projetos e rotas, mesmos contatos, nova composição inspirada na página MATE.
 
-## Projetos publicados — 15/10/2026
-Brasa Burger: demonstração pública na Vercel, repositório público, Next.js/React/TypeScript/Tailwind. Restaurante fictício, preços e imagens ilustrativos; WhatsApp depende de configuração. Amarílis Jóias: vitrine demonstrativa em HTML/CSS/JavaScript publicada no Cloudflare Pages; repositório privado. Catálogo em preparação, sem vendas ou pagamentos. Capturas reais dos sites em public/images/*-preview.jpg. Agendamento e controle financeiro permanecem planejados. Rotas cardapio-digital e loja-virtual preservadas.
+Objetivo: apresentar trabalho e facilitar contato para orçamentos. Usuários: potenciais clientes e colaboradores. Stack: Next.js, React, TypeScript, Tailwind, Lucide e Manrope.
+
+AndradeTech possui captura inicial. Brasa Burger, Amarílis e Forma possuem demonstrações públicas com dados ilustrativos e limitações declaradas. Controle financeiro permanece planejado. Não inventar clientes, resultados ou depoimentos.
+
+Publicação na branch main e produção Vercel autorizada pelo usuário. Indexação habilitada. Contato público fornecido pelo usuário: marcelo.andrade.webdev@gmail.com e WhatsApp +55 73 98834-3028. Mensagem personalizada mantida. Não enviar mensagens automaticamente.

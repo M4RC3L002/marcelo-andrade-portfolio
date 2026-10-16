@@ -1,129 +1,15 @@
----
-name: Marcelo Andrade
-description: Portfólio editorial de desenvolvimento web em azul-marinho e ciano.
-colors:
-  background: "#081823"
-  surface: "#102530"
-  accent: "#57dcdf"
-  text: "#edf5f7"
-  muted: "#a4bac6"
-  line: "#29414e"
-  accent-hover: "#9ceff0"
-typography:
-  display:
-    fontFamily: "Manrope Variable, sans-serif"
-    fontSize: "clamp(46px, 5.5vw, 76px)"
-    fontWeight: 650
-    lineHeight: 1.15
-    letterSpacing: "-0.035em"
-  headline:
-    fontFamily: "Manrope Variable, sans-serif"
-    fontSize: "clamp(32px, 3.4vw, 46px)"
-    fontWeight: 600
-    lineHeight: 1.15
-  body:
-    fontFamily: "Manrope Variable, sans-serif"
-    fontSize: "15px"
-    lineHeight: 1.7
-rounded:
-  chip: "4px"
-  control: "5px"
-  window: "6px"
-  preview: "7px"
-  hero-frame: "10px"
-spacing:
-  desktop-section: "104px"
-  mobile-section: "65px"
-  desktop-gutter: "48px"
-  tablet-gutter: "32px"
-  mobile-gutter: "20px"
-components:
-  button-primary:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.background}"
-    rounded: "{rounded.control}"
-    padding: "15px 22px"
-  button-primary-hover:
-    backgroundColor: "{colors.accent-hover}"
-    textColor: "{colors.background}"
-  filter-selected:
-    backgroundColor: "{colors.accent}"
-    textColor: "{colors.background}"
-    rounded: "{rounded.control}"
-    padding: "10px 18px"
-  technology-chip:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.text}"
-    rounded: "{rounded.chip}"
-    padding: "5px 12px"
----
+# Portfólio alternativo
 
-# Design System: Marcelo Andrade
+Direção editorial inspirada na referência MATE inspecionada em 15/10/2026. Implementação própria, sem reaproveitar materiais da agência.
 
-## Overview
+## Tokens
+Fundo #101415, superfície #192022, texto #f0eee5, texto secundário #adb6b5, ciano #63d9d3. Seções claras #f0eee5 com texto #182627. Manrope auto-hospedada. Headline principal fluida de 47 a 112px, leve/itálica na primeira linha e forte/ciano na segunda. Corpo 13 a 16px; texto de apoio 10 a 12px.
 
-**Creative North Star: "Portfólio editorial de produtos digitais"**
+## Composição
+Cabeçalho de 80px (72px mobile), abertura centralizada, galeria inclinada com três interfaces reais. Serviços em linhas abertas em seção clara. Projetos em duas colunas com prévias de proporção 1.4 e navegação independente para site e detalhes. Sobre em duas colunas claras; contato tipográfico centralizado. Até 700px, menu recolhível e conteúdo em coluna única.
 
-Composição própria em português, com títulos amplos, superfícies escuras e ciano para ações. O trabalho aparece como conceito visual desde a primeira tela.
+## Interação
+Foco visível; menu fecha com Escape e retorna foco ao botão. Seletores aria-pressed; nomes acessíveis; alvos de 44px. Movimento apenas na apresentação inicial do título e no feedback de interação; prefers-reduced-motion desliga as animações. Cabeçalho opaco como fallback de blur e de preferência por transparência reduzida. Projetos são a mídia principal; nenhum vídeo ou fundo decorativo da referência foi copiado.
 
-**Key Characteristics:**
-- Hierarquia tipográfica ampla e espaços generosos.
-- Linhas abertas para organizar serviços e conteúdo.
-- Prévias ilustrativas acompanhadas de estado explícito.
-
-Extraído de app/globals.css e dos componentes. Revisão em navegador e validação visual indisponíveis nesta etapa. A direção registra a implementação atual, sem alegar aprovação visual adicional.
-
-## Colors
-
-### Primary
-Ciano luminoso (accent) para ações, foco, seleção e palavras em destaque. Accent-hover clareia a ação principal no hover.
-
-### Neutral
-Marinho profundo (background) sustenta a página; surface organiza menu e etiquetas. Text é branco frio; muted é azul acinzentado para apoio; line separa seções. Prévias ilustrativas têm paletas locais próprias.
-
-## Typography
-
-Manrope Variable auto-hospedada pelo pacote de fontes, com fallback sans-serif. Escalas principais no frontmatter. Corpo por componente entre 13 e 15px; textos de apoio e miniaturas são menores. Títulos têm tracking negativo. Hero mobile: clamp(41px, 10.7vw, 65px). Descrição do hero limitada a 40ch; apresentação pessoal a 55ch. Miniaturas são decorativas.
-
-## Layout
-
-Conteúdo máximo de 1184px. Gutters do frontmatter correspondem a desktop, até 1000px e até 700px. Hero em duas colunas, serviços em três, sobre e contato em duas. Grade de projetos com duas colunas e primeiro resultado amplo. Até 700px, uma coluna, monograma decorativo oculto e navegação recolhível. Cabeçalho sticky de 88px, reduzido a 72px no mobile. Seções usam espaçamentos do frontmatter.
-
-## Elevation & Depth
-
-Camadas tonais e divisores predominam. Janelas ilustrativas usam sombra 0 16px 35px #0002. Moldura do hero levemente rotacionada retorna a zero no hover com transição de 0.3s ease-out. Movimento reduzido remove transições, animações e a rotação do hero.
-
-## Shapes
-
-Raios variam conforme o papel descrito no frontmatter. Conteúdo principal aberto, com linhas em vez de cartões ao redor de cada seção.
-
-## Components
-
-- Ação principal: peso 750, altura mínima 48px, hover claro; foco com contorno ciano de 2px e afastamento de 6px.
-- Filtros: altura mínima 44px, aria-pressed, seleção ciano, hover sobre superfície e contagem anunciada.
-- Navegação: links de apoio ficam ciano no hover. Mobile usa botão de 44px; Escape fecha e devolve foco; links fecham o menu.
-- Etiquetas de tecnologia: rótulos sem ação sobre superfície escura.
-- Prévias: interfaces decorativas HTML/CSS, com dados ilustrativos e estado Planejado. Detalhes apresentam problema, escopo e próximos passos.
-- Contato: canais pendentes são texto estático. Não há formulário ou campo de entrada.
-
-## Do's and Don'ts
-
-### Do:
-- Do manter ciano nas ações, seleção e foco.
-- Do preservar rótulos de conceito e estado Planejado nas propostas.
-- Do respeitar movimento reduzido e manter conteúdo visível sem animação de entrada.
-
-### Don't:
-- Don't apresentar prévias como capturas de produtos concluídos.
-- Don't criar links falsos para canais ainda não informados.
-- Don't substituir a composição aberta por cartões em todas as seções.
-
-### Dashboard do AndradeTech OS
-Imagem de apresentação em public/images/andradetech-dashboard.png, derivada da captura fornecida pelo usuário e editada para remover barras e identificação pessoal. Usar proporção preservada com object-fit contain e legenda de visão inicial; não rotular como dados ilustrativos.
-
-### Refinamento Watermelon UI
-Navigation 1, Tabs 1 e Contact 1 adaptados ao sistema existente. Navegação ativa com aria-current location; filtros segmentados com contagem e aria-pressed; contatos por método. Captura principal reta, cantos de 12–14px em painéis de destaque, preservando paleta e fonte. Referências em WATERMELON.md.
-
-Glassmorphism solicitado pelo usuário em 15/10/2026: apenas destaque principal e primeiro projeto, superfície translúcida azul-marinho/ciano, blur 18/12px, borda clara discreta e sombra com deslocamento. Captura opaca e íntegra; fallback sólido sem suporte a backdrop-filter.
-
-Atualização: capturas reais do Brasa Burger e Amarílis substituem as prévias conceituais de cardápio e loja. Links de demonstração ficam fora do link de detalhes, com nova aba explicitada. A vitrine Amarílis preserva suas proporções; fotografias pertencem à apresentação demonstrativa do site. Rotas existentes mantidas.
+## Fundo animado
+Canvas decorativo com partículas e conexões em ciano, linhas em fluxo e reação ao cursor apenas com mouse. 30 fps, 66 partículas no desktop e 30 no celular, DPR limitado. Pausa manual, pausa fora da tela e em aba oculta. Movimento reduzido desenha quadro estático. Sem biblioteca adicional ou atualizações React por frame.
