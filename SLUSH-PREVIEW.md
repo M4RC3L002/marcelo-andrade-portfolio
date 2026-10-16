@@ -8,7 +8,7 @@ A adaptação usa o conteúdo, projetos, screenshots e contatos reais do portfó
 
 Animações decorativas: tubo e adesivos com transform; faixa tipográfica com movimento linear. Botão de pausa controla os loops; IntersectionObserver e visibilitychange pausam fora da tela ou em aba oculta. Movimento reduzido remove animações. Conteúdo e links funcionam sem suporte a animação.
 
-A foto abre a demonstração, Explorar projeto mantém a página de detalhes existente. Controle financeiro continua apresentado como planejamento. Nenhum novo resultado comercial ou depoimento foi inventado.
+A foto abre a demonstração, Explorar projeto mantém a página de detalhes existente. Os projetos usam os dados compartilhados atuais do portfólio, incluindo a demonstração de Controle Financeiro. Nenhum novo resultado comercial ou depoimento foi inventado.
 
 ## Verificação
 Build e TypeScript aprovados. Inspeção visual desktop 1366px e mobile 390px sem overflow horizontal. Filtro Gestão apresenta dois projetos. Pausa alterna aria-pressed para true. Meta robots noindex, nofollow confirmada. Primeira inspeção ajustou a posição do botão de pausa para separar os adesivos decorativos. Não testado em aparelho físico.
