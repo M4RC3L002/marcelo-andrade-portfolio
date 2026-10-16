@@ -13,3 +13,6 @@ Foco visível; menu fecha com Escape e retorna foco ao botão. Seletores aria-pr
 
 ## Fundo animado
 Canvas decorativo com partículas e conexões em ciano, linhas em fluxo e reação ao cursor apenas com mouse. 30 fps, 66 partículas no desktop e 30 no celular, DPR limitado. Pausa manual, pausa fora da tela e em aba oculta. Movimento reduzido desenha quadro estático. Sem biblioteca adicional ou atualizações React por frame.
+
+## Coreografia de movimento
+Entradas ao rolar com IntersectionObserver e WAAPI, 650ms ease-out e escalonamento de 60ms. Conteúdo visível sem JavaScript. Galeria flutua lentamente com transformações independentes; pausa compartilhada com o fundo. Projetos ganham profundidade no mouse, serviços e setas respondem à interação. Progresso de leitura via CSS scroll timeline. Movimento reduzido elimina deslocamentos e cancela entradas em execução. Sem dependências novas.

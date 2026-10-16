@@ -9,6 +9,10 @@ export default function HeroBackground() {
  const [paused,setPaused]=useState(false);
  const [reduced,setReduced]=useState(false);
  useEffect(()=>{
+  document.documentElement.dataset.motionPaused=String(paused);
+  return()=>{delete document.documentElement.dataset.motionPaused;};
+ },[paused]);
+ useEffect(()=>{
   const canvas=canvasRef.current;
   if(!canvas)return;
   const context=canvas.getContext('2d');
@@ -73,5 +77,5 @@ export default function HeroBackground() {
   setReduced(preference.matches);resize();
   return()=>{cancelAnimationFrame(frame);observer.disconnect();intersection.disconnect();host.removeEventListener('pointermove',onPointer);host.removeEventListener('pointerleave',leave);document.removeEventListener('visibilitychange',sync);preference.removeEventListener('change',onPreference);};
  },[paused]);
- return <><div className="hero-atmosphere" aria-hidden="true"/><canvas ref={canvasRef} className="hero-network" aria-hidden="true"/>{!reduced&&<button className="motion-toggle" type="button" aria-pressed={paused} aria-label={paused?'Retomar animação do fundo':'Pausar animação do fundo'} onClick={()=>setPaused(value=>!value)}>{paused?<Play size={14}/>:<Pause size={14}/>}<span>{paused?'Retomar movimento':'Pausar movimento'}</span></button>}</>;
+ return <><div className="hero-atmosphere" aria-hidden="true"/><canvas ref={canvasRef} className="hero-network" aria-hidden="true"/>{!reduced&&<button className="motion-toggle" type="button" aria-pressed={paused} aria-label={paused?'Retomar animações':'Pausar animações'} onClick={()=>setPaused(value=>!value)}>{paused?<Play size={14}/>:<Pause size={14}/>}<span>{paused?'Retomar movimento':'Pausar movimento'}</span></button>}</>;
 }

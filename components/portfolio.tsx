@@ -7,6 +7,7 @@ import { projects, site } from '@/lib/site';
 import Preview from './preview';
 import ProjectFilters from './project-filters';
 import HeroBackground from './hero-background';
+import MotionEffects from './motion-effects';
 
 const links = [['inicio', 'Início'], ['servicos', 'Serviços'], ['sobre', 'Sobre'], ['projetos', 'Projetos'], ['contato', 'Contato']];
 const covers = [
@@ -21,6 +22,7 @@ export default function Portfolio() {
  useEffect(()=>{if(!open)return; const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);menuButton.current?.focus();}};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey);},[open]);
  const filtered=projects.filter(p=>filter==='Todos'||p.category===filter);
  return <>
+  <MotionEffects filter={filter}/>
   <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header className="header"><div className="container header-inner">
    <a className="wordmark" href="#inicio" aria-label="Marcelo Andrade, início">ma<span>.</span></a>

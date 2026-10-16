@@ -20,3 +20,24 @@
 .hero .hero-copy,.hero .showreel{position:relative;z-index:2}
 @media(max-width:700px){.hero{padding-top:62px}.motion-toggle{right:20px;top:7px;padding:8px 12px;min-height:44px;font-size:9px}.hero-network{mask-image:radial-gradient(ellipse at 50% 30%,#0005,#000 80%);-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#0005,#000 80%)}}
 @media(hover:hover) and (pointer:fine){.motion-toggle:hover{background:#234448;color:#ecfffa}}
+/* Motion choreography: reveal content once, float the gallery and give actions depth. */
+:root{--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-in-out:cubic-bezier(0.77,0,0.175,1)}
+.reel-card{animation:gallery-drift 8s var(--ease-in-out) infinite;will-change:transform}
+.reel-card:nth-child(2){animation-delay:-2.5s;animation-duration:9s}
+.reel-card:nth-child(3){animation-delay:-5s;animation-duration:10s}
+@keyframes gallery-drift{0%,100%{translate:0 0}50%{translate:0 -13px}}
+[data-motion-paused=true] .reel-card{animation-play-state:paused}
+.button{transition:background 200ms ease,transform 160ms var(--ease-out)}
+.button:active{transform:scale(.97)}
+.button svg,.text-link svg,.project-open svg,.code-link svg,.service-row>svg{transition:transform 200ms var(--ease-out)}
+.service-row h3{transition:transform 250ms var(--ease-out)}
+.project-photo .preview{transition:transform 250ms var(--ease-out),filter 250ms ease}
+.capture img{transition:transform 250ms var(--ease-out)}
+.project-photo{perspective:900px}
+.desktop-nav a{position:relative}
+.desktop-nav a:after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 200ms var(--ease-out)}
+.reading-progress{display:none}
+@supports(animation-timeline:scroll()){@media(prefers-reduced-motion:no-preference){.reading-progress{display:block;position:fixed;top:0;left:0;width:100%;height:2px;z-index:60;background:var(--accent);transform-origin:left;animation:reading-progress linear both;animation-timeline:scroll(root block)}@keyframes reading-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}}}
+@media(hover:hover) and (pointer:fine){.reel-card:hover{animation-play-state:paused}.button:hover svg,.text-link:hover svg,.project-open:hover svg,.code-link:hover svg{transform:translate(3px,-2px)}.hero-actions .primary:hover svg{transform:translateX(4px)}.service-row:hover h3{transform:translateX(10px)}.service-row:hover>svg{transform:translate(3px,-3px)}.project-photo:hover .preview{transform:rotateX(2deg) scale(.985)}.project-photo:hover .capture img{transform:scale(1.035)}.desktop-nav a:hover:after,.desktop-nav a:focus-visible:after{transform:scaleX(1)}}
+@media(max-width:700px){@keyframes gallery-drift{0%,100%{translate:0 0}50%{translate:0 -7px}}}
+@media(prefers-reduced-motion:reduce){.reel-card{animation:none!important;translate:none;will-change:auto}.reading-progress{display:none}.project-photo:hover .preview,.project-photo:hover .capture img,.service-row:hover h3,.service-row:hover>svg,.button:hover svg,.text-link:hover svg,.project-open:hover svg,.code-link:hover svg{transform:none}}
