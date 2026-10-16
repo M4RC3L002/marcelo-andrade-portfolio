@@ -43,8 +43,8 @@ export default function HeroBackground() {
      const y=height*.68+line*14+Math.sin(x*.005+time*.3+line*.21)*38*envelope;
      if(x===-20)context.moveTo(x,y);else context.lineTo(x,y);
     }
-    context.strokeStyle=`rgba(78,208,209,${.045+line*.004})`;
-    context.lineWidth=.8;
+    context.strokeStyle=`rgba(78,208,209,${.07+line*.005})`;
+    context.lineWidth=1.1;
     context.stroke();
    }
    for(let i=0;i<points.length;i++){
@@ -65,13 +65,13 @@ export default function HeroBackground() {
    if(now-last>=1000/30){elapsedRef.current+=last?Math.min(now-last,64):0;last=now;draw();}
    frame=requestAnimationFrame(tick);
   };
-  const sync=()=>{cancelAnimationFrame(frame);frame=0;last=0;draw();if(!paused&&!preference.matches&&visible&&!document.hidden)frame=requestAnimationFrame(tick);};
+  const sync=()=>{host.dataset.motionVisible=String(visible&&!document.hidden);cancelAnimationFrame(frame);frame=0;last=0;draw();if(!paused&&!preference.matches&&visible&&!document.hidden)frame=requestAnimationFrame(tick);};
   const resize=()=>{width=host.clientWidth;height=host.clientHeight;const ratio=Math.min(window.devicePixelRatio||1,width<700?1:1.5);canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0);sync();};
   const onPointer=(event:PointerEvent)=>{if(!pointerEnabled.matches)return;const rect=host.getBoundingClientRect();pointer.x=event.clientX-rect.left;pointer.y=event.clientY-rect.top;};
   const leave=()=>{pointer.x=-1000;pointer.y=-1000;};
   const onPreference=()=>{setReduced(preference.matches);sync();};
   const observer=new ResizeObserver(resize);observer.observe(host);
-  const intersection=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();});intersection.observe(host);
+  const intersection=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;host.dataset.motionVisible=String(visible);sync();});intersection.observe(host);
   host.addEventListener('pointermove',onPointer,{passive:true});host.addEventListener('pointerleave',leave);
   document.addEventListener('visibilitychange',sync);preference.addEventListener('change',onPreference);
   setReduced(preference.matches);resize();

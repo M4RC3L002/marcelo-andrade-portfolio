@@ -4,6 +4,6 @@ Versão oficial do portfólio de Marcelo Andrade, promovida após aprovação do
 
 Objetivo: apresentar trabalho e facilitar contato para orçamentos. Usuários: potenciais clientes e colaboradores. Stack: Next.js, React, TypeScript, Tailwind, Lucide e Manrope.
 
-AndradeTech possui captura inicial. Brasa Burger, Amarílis e Forma possuem demonstrações públicas com dados ilustrativos e limitações declaradas. Controle financeiro permanece planejado. Não inventar clientes, resultados ou depoimentos.
+AndradeTech possui demonstração pública isolada, com dados fictícios locais, pagamentos e mensagens simulados. Brasa Burger, Amarílis e Forma possuem demonstrações públicas com dados ilustrativos e limitações declaradas. Controle financeiro permanece planejado. Não inventar clientes, resultados ou depoimentos.
 
 Publicação na branch main e produção Vercel autorizada pelo usuário. Indexação habilitada. Contato público fornecido pelo usuário: marcelo.andrade.webdev@gmail.com e WhatsApp +55 73 98834-3028. Mensagem personalizada mantida. Não enviar mensagens automaticamente.
